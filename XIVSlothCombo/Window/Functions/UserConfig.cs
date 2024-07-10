@@ -1387,10 +1387,10 @@ namespace XIVSlothCombo.Window.Functions
             {
                 //int[]? actions = Service.Configuration.DancerDanceCompatActionIDs.Cast<int>().ToArray();
                 int[]? actions = Service.Configuration.DancerDanceCompatActionIDs.Select(x => (int)x).ToArray();
-                
+
 
                 bool inputChanged = false;
-                
+
                 inputChanged |= ImGui.InputInt("Emboite (Red) ActionID", ref actions[0], 0);
                 inputChanged |= ImGui.InputInt("Entrechat (Blue) ActionID", ref actions[1], 0);
                 inputChanged |= ImGui.InputInt("Jete (Green) ActionID", ref actions[2], 0);
@@ -2011,7 +2011,7 @@ namespace XIVSlothCombo.Window.Functions
             // ====================================================================================
             #region SAGE
 
-            if (preset is CustomComboPreset.SGE_ST_DPS) 
+            if (preset is CustomComboPreset.SGE_ST_DPS)
                 UserConfig.DrawAdditionalBoolChoice(SGE.Config.SGE_ST_DPS_Adv, $"Apply all selected options to {SGE.Dosis2.ActionName()}", $"{SGE.Dosis.ActionName()} & {SGE.Dosis3.ActionName()} will behave normally.");
 
             if (preset is CustomComboPreset.SGE_ST_DPS_EDosis)
@@ -2577,8 +2577,8 @@ namespace XIVSlothCombo.Window.Functions
 
             if (preset == CustomComboPreset.WHM_AoEHeals_Medica2)
             {
-                UserConfig.DrawRoundedSliderFloat(0f, 6f, WHM.Config.WHM_AoEHeals_Medica2Time, "Time Remaining on Buff to Renew");
-                UserConfig.DrawAdditionalBoolChoice(WHM.Config.WHM_AoEHeals_Medica2MO, "Party UI Mousover Checking", "Check your mouseover target for the Medica II buff.\nTo be used in conjunction with Redirect/Reaction/etc.");
+                UserConfig.DrawRoundedSliderFloat(0f, 6f, WHM.Config.WHM_AoEHeals_MedicaTime, "Time Remaining on Buff to Renew");
+                UserConfig.DrawAdditionalBoolChoice(WHM.Config.WHM_AoEHeals_MedicaMO, "Party UI Mousover Checking", "Check your mouseover target for the Medica II/III buff.\nTo be used in conjunction with Redirect/Reaction/etc.");
             }
 
             #endregion

@@ -65,8 +65,8 @@ namespace XIVSlothCombo
             //SGE.JobID,
             //SMN.JobID,
             //VPR.JobID,
-            WAR.JobID,
-            WHM.JobID
+            //WAR.JobID,
+            //WHM.JobID
         };
 
         public static readonly List<uint> DisabledJobsPVP = new List<uint>()
